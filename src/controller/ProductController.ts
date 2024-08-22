@@ -25,17 +25,17 @@ export class ProductController {
         return product
     }
 
-    // async save(request: Request, response: Response, next: NextFunction) {
-    //     const { name, price, description } = request.body;
+    async save(request: Request, response: Response, next: NextFunction) {
+        const { name, price, description } = request.body;
 
-    //     const product = Object.assign(new Product(), {
-    //         name,
-    //         price,
-    //         description,
-    //     })
+        const product = Object.assign(new Product(), {
+            name,
+            price,
+            description,
+        })
 
-    //     return this.productRepository.save(product)
-    // }
+        return this.productRepository.save(product)
+    }
 
     async saveProduct(request: Request, response: Response, next: NextFunction) {
         try {
