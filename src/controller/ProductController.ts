@@ -115,7 +115,11 @@ export class ProductController {
 
         await this.productRepository.remove(productToRemove)
 
+        console.log("love you!");
+        
+
         return "product has been removed"
+
     }
 
 
